@@ -1,98 +1,129 @@
-import React from 'react';
-import Header from '../../component/header'
+import React from "react";
+import Header from "../../component/header";
 import { makeStyles, Button, Card, CardMedia } from "@material-ui/core";
-import seta from '../../img/arrow-right.svg'
+import seta from "../../img/arrow-right.svg";
+import Footer from "../../component/footer";
 
 export default function DashBoard() {
-    const { container, cardContainer, bgImage, position, titulo, subTitle, button, svg, textButton } = useStyles();
+  const {
+    container,
+    cardContainer,
+    bgImage,
+    position,
+    titulo,
+    subTitle,
+    button,
+    svg,
+    textButton,
+  } = useStyles();
 
-    return (
-        <div className={container}>
-            <div>
-                <Header />
-            </div>
-            <Card className={cardContainer}>
-                {/* <video className={bgImage} autoPlay loop muted>
+  return (
+    <div className={container}>
+      <div>
+        <Header />
+      </div>
+      <Card className={cardContainer}>
+        {/* <video className={bgImage} autoPlay loop muted>
                     <source src={require('../../video/adoracao.mp4')} type='video/mp4'/>
                 </video> */}
-                <CardMedia className={bgImage} component="video" alt="video" src={require('../../video/adoracao.mp4')} title="video"
-                    type="video/mp4" muted autoPlay loop />
-                <div className={position}>
-                    <h1 className={titulo}>Faça parte desse ministério</h1>
+        <CardMedia
+          className={bgImage}
+          component="video"
+          alt="video"
+          src={require("../../video/bethel.mp4")}
+          title="video"
+          type="video/mp4"
+          muted
+          autoPlay
+          loop
+        />
+        <div className={position}>
+          <h1 className={titulo}>Faça parte desse ministério</h1>
 
-                    <p className={subTitle}>Sinta a presença de Deus on-line <br /> ou presencialmente em nossos cultos</p>
-                    <Button className={button}><p className={textButton}>Vá até uma igreja Bethel</p><embed className={svg} src={seta} /></Button>
-                    <br />
-                    <Button className={button}><p className={textButton}>Assista nossos cultos</p> <embed className={svg} src={seta} /></Button>
-                </div>
-            </Card>
+          <p className={subTitle}>
+            Sinta a presença de Deus on-line <br /> ou presencialmente em nossos
+            cultos
+          </p>
+          <Button className={button}>
+            <p className={textButton}>Vá até uma igreja Bethel</p>
+            <embed className={svg} src={seta} />
+          </Button>
+          <br />
+          <Button className={button}>
+            <p className={textButton}>Assista nossos cultos</p>{" "}
+            <embed className={svg} src={seta} />
+          </Button>
         </div>
-
-    )
+      </Card>
+      <div>
+        <Footer />
+      </div>
+    </div>
+  );
 }
 
 const useStyles = makeStyles(() => ({
-    container: {
-        padding: 0,
-        margin: 0,
+  container: {
+    padding: 0,
+    margin: 0,
+  },
+  bgImage: {
+    height: "auto",
+    width: "100%",
+    position: "absolute",
+  },
+  position: {
+    position: "relative",
+    marginLeft: 100,
+    "@media (max-width:900px)": {
+      marginLeft: 0,
     },
-    bgImage: {
-        height: 'auto',
-        width: "100%",
-        position: 'absolute',
+  },
+  titulo: {
+    color: "white",
+    fontSize: 64,
+    fontFamily: "Inter, sans-serif",
+    marginTop: 210,
+    "@media (max-width:900px)": {
+      fontSize: "1.5rem",
+      marginTop: 130,
+      marginLeft: 50,
+      textAlign: "center",
     },
-    position: {
-        position: 'absolute',
-        marginLeft: 100,
-        '@media (max-width:900px)': {
-            marginLeft: 0
-        },
+  },
+  subTitle: {
+    color: "white",
+    fontSize: 32,
+    fontFamily: "Inter  ,sans-serif",
+    fontWeight: "100",
+    "@media (max-width:900px)": {
+      fontSize: "18px",
+      color: "black",
+      fontWeight: "300",
+      marginTop: 80,
+      marginLeft: 10,
+      textAlign: "center",
     },
-    titulo: {
-        color: 'white',
-        fontSize: 64,
-        fontFamily: 'Inter, sans-serif',
-        marginTop: 210,
-        '@media (max-width:900px)': {
-            fontSize: '1.5rem',
-            marginTop: 130,
-            marginLeft: 50,
-            textAlign: 'center',
-        },
+  },
+  button: {
+    backgroundColor: "#DF1E26",
+    color: "white",
+    borderRadius: 13,
+    marginTop: 30,
+    padding: 10,
+    "@media (max-width:900px)": {
+      marginLeft: 70,
     },
-    subTitle: {
-        color: 'white',
-        fontSize: 32,
-        fontFamily: 'Inter  ,sans-serif',
-        fontWeight: '100',
-        '@media (max-width:900px)': {
-            fontSize: '18px',
-            color: 'black',
-            fontWeight: '300',
-            marginTop: 80,
-            marginLeft: 10,
-            textAlign: 'center',
-        },
-    },
-    button: {
-        backgroundColor: '#256EEB',
-        color: 'white',
-        borderRadius: 13,
-        marginTop: 30,
-        padding: 10,
-        '@media (max-width:900px)': {
-            marginLeft: 70,
-        },
-    },
-    svg: {
-        color: 'white'
-    },
-    textButton: {
-        fontFamily: 'Inter  ,sans-serif',
-        padding: 0,
-        margin: 2
-    },
-    cardContainer: {
-        height: "100%"
-    }
+  },
+  svg: {
+    color: "white",
+  },
+  textButton: {
+    fontFamily: "Inter  ,sans-serif",
+    padding: 0,
+    margin: 2,
+  },
+  cardContainer: {
+    height: "100%",
+  },
 }));

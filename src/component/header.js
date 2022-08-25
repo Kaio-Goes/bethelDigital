@@ -7,7 +7,7 @@ import { IconButton } from "@material-ui/core"
 const headersData = [
     {
         label: "A igreja",
-        href: "/listings",
+        href: "/a-igreja",
     },
     {
         label: "Envolve-se",
@@ -33,7 +33,7 @@ const headersData = [
 
 const useStyles = makeStyles(() => ({
     header: {
-        backgroundColor: "#256eeb",
+        backgroundColor: "#DF1E26",
         paddingBottom: 10,
         paddingTop: 10,
         " @media (max-width: 900px)": {
@@ -94,7 +94,9 @@ export default function Header() {
 
     const femmecubatorLogo = (
         <Typography variant="h6" component="h1" className={logo}>
-            <img className={logoImage} alt='ssss' src={require('../img/bethelLogo.png')} />
+            <a href="/">
+            <img className={logoImage} alt='ssss' src={require('../img/bethelLogo.png')}/>
+            </a>
         </Typography>
     );
 
