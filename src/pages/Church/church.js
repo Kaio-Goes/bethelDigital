@@ -4,7 +4,9 @@ import {
   makeStyles,
   Card,
   CardMedia,
+  Divider,
   CardContent,
+  Typography,
 } from "@material-ui/core";
 import Footer from "../../component/footer";
 
@@ -20,6 +22,11 @@ export default function Church() {
     cardContent,
     text,
     body,
+    column,
+    title,
+    textCard,
+    subtitle,
+    minicard,
   } = useStyles();
 
   return (
@@ -67,7 +74,60 @@ export default function Church() {
                   </div>
                 </div>
               </CardContent>
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <Divider />
             </div>
+          </Card>
+          <Card className={column}>
+            <Card sx={{ minWidth: 275 }} className={minicard}>
+              <CardContent>
+                <Typography gutterBottom className={subtitle}>
+                  Corpo Clínico Qualificado{" "}
+                </Typography>
+                <Typography component="div" className={title}>
+                  Onde as Pessoas Vem Primeiro
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} className={textCard}>
+                  Na Salute Clínicas Especializadas o paciente está em boas
+                  mãos. Temos o melhores e mais atualizados especialistas da
+                  Região Norte do DF em diversas áreas de atuação.
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card sx={{ minWidth: 275 }} className={minicard}>
+              <CardContent>
+                <Typography gutterBottom className={subtitle}>
+                  Pronto Atendimento
+                </Typography>
+                <Typography component="div" className={title}>
+                  Cuidados de Alto Nível{" "}
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} className={textCard}>
+                  Com foco no atendimento humanizado, na qualificação da equipe,
+                  na adoção de novas tecnologias e na expansão do atendimento, a
+                  Salute é referência em qualidade técnica.
+                </Typography>
+              </CardContent>
+            </Card>
+            <Card sx={{ minWidth: 275 }} className={minicard}>
+              <CardContent>
+                <Typography gutterBottom className={subtitle}>
+                  Estamos aqui por você{" "}
+                </Typography>
+                <Typography component="div" className={title}>
+                  Departamento de Emergência
+                </Typography>
+                <Typography sx={{ mb: 1.5 }} className={textCard}>
+                  Criamos em Sobradinho uma ampla estrutura com soluções
+                  completas em saúde que vai de consultas médicas a medicação
+                  prescrita e exames clínicos.
+                </Typography>
+              </CardContent>
+            </Card>
           </Card>
         </div>
       </div>
@@ -137,5 +197,32 @@ const useStyles = makeStyles(() => ({
     marginLeft: 100,
     marginRight: 100,
     fontWeight: "300",
+  },
+  column: {
+    display: "flex",
+    padding: 10,
+    justifyContent: "center",
+  },
+  minicard: {
+    width: 400,
+  },
+  subtitle: {
+    fontFamily: "Inter  ,sans-serif",
+    color: "rgba(255, 0, 0, 0.6)",
+    fontSize: 14,
+  },
+  title: {
+    fontFamily: "Inter  ,sans-serif",
+    color: "rgba(255, 0, 0, 0.8)",
+    fontSize: 19,
+    fontWeight: "500",
+    paddingTop: 10,
+    paddingBottom: 10
+  },
+  textCard: {
+    fontFamily: "Inter  ,sans-serif",
+    fontSize: 14,
+    fontWeight: "200",
+    lineHeight: '2'
   },
 }));

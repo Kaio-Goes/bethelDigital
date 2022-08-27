@@ -29,7 +29,7 @@ export default Footer;
 const useStyles = makeStyles(() => ({
   footer: {
     width: '100%',
-    height: "120px",
+    height: "100px",
     marginTop: "60px",
     backgroundColor: "#DF1E26",
     position: "relative",
