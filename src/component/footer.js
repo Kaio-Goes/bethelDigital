@@ -30,8 +30,8 @@ const useStyles = makeStyles(() => ({
   footer: {
     width: '100%',
     height: "100px",
-    marginTop: "60px",
-    backgroundColor: "#DF1E26",
+    marginTop: "90px",
+    backgroundColor: "#256eeb",
     position: "relative",
   },
   social: {

@@ -30,7 +30,7 @@ export default function DashBoard() {
           className={bgImage}
           component="video"
           alt="video"
-          src={require("../../video/bethel.mp4")}
+          src={require("../../video/betheligreja.mp4")}
           title="video"
           type="video/mp4"
           muted
@@ -106,7 +106,7 @@ const useStyles = makeStyles(() => ({
     },
   },
   button: {
-    backgroundColor: "#DF1E26",
+    backgroundColor: "#256eeb",
     color: "white",
     borderRadius: 13,
     marginTop: 30,
